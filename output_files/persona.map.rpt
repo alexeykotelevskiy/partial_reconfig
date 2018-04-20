@@ -1,0 +1,879 @@
+Analysis & Synthesis report for persona
+Fri Apr 20 18:49:40 2018
+Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis IP Cores Summary
+  7. Partition Status Summary
+  8. Source assignments for Top-level Entity: |top
+  9. Source assignments for reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|altsyncram_ndn1:FIFOram
+ 10. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst
+ 11. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host
+ 12. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1
+ 13. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1|alt_pr_cb_interface:alt_pr_cb_interface
+ 14. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host
+ 15. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host|alt_pr_bitstream_controller_v1:alt_pr_bitstream_controller_v1
+ 16. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_decoder:alt_pr_bitstream_decoder
+ 17. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_mux:alt_pr_mux
+ 18. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_width_adapter:jtag_input_width_adapter
+ 19. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface
+ 20. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component
+ 21. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|lpm_shiftreg:jtag_data_reg
+ 22. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module
+ 23. Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_width_adapter:st_mm_input_width_adapter
+ 24. Partition Dependent Files
+ 25. Partition "led_flash:led_flash_inst" Resource Utilization by Entity
+ 26. Partition Dependent Files
+ 27. Post-Synthesis Netlist Statistics for Partition led_flash:led_flash_inst
+ 28. Port Connectivity Checks: "reconfig:reconfig_inst"
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
+ 31. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera MegaCore Function License Agreement, or other 
+applicable license agreement, including, without limitation, 
+that your use is for the sole purpose of programming logic 
+devices manufactured by Altera and sold by Altera or its 
+authorized distributors.  Please refer to the applicable 
+agreement for further details.
+
+
+
++-----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                      ;
++---------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Fri Apr 20 18:49:40 2018           ;
+; Quartus Prime Version           ; 16.0.0 Build 211 04/27/2016 SJ Standard Edition ;
+; Revision Name                   ; persona                                         ;
+; Top-level Entity Name           ; top                                             ;
+; Family                          ; Cyclone V                                       ;
+; Logic utilization (in ALMs)     ; N/A until Partition Merge                       ;
+; Total registers                 ; N/A until Partition Merge                       ;
+; Total pins                      ; N/A until Partition Merge                       ;
+; Total virtual pins              ; N/A until Partition Merge                       ;
+; Total block memory bits         ; N/A until Partition Merge                       ;
+; Total DSP Blocks                ; N/A until Partition Merge                       ;
+; Total HSSI RX PCSs              ; N/A until Partition Merge                       ;
+; Total HSSI PMA RX Deserializers ; N/A until Partition Merge                       ;
+; Total HSSI TX PCSs              ; N/A until Partition Merge                       ;
+; Total HSSI PMA TX Serializers   ; N/A until Partition Merge                       ;
+; Total PLLs                      ; N/A until Partition Merge                       ;
+; Total DLLs                      ; N/A until Partition Merge                       ;
++---------------------------------+-------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; top                ; persona            ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                       ; Off                ; Off                ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; PowerPlay Power Optimization During Synthesis                                   ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Synthesis Seed                                                                  ; 1                  ; 1                  ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                     ;
++--------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+-------------+
+; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                     ; Library     ;
++--------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+-------------+
+; led_wrapper.sv                                                     ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/led_wrapper.sv                                                           ;             ;
+; freeze_region.sv                                                   ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/freeze_region.sv                                                         ;             ;
+; top.sv                                                             ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/top.sv                                                                   ;             ;
+; reconfig.v                                                         ; yes             ; User Wizard-Generated File         ; G:/NIR2/reconfig.v                                                               ; reconfig    ;
+; reconfig/alt_pr.v                                                  ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/alt_pr.v                                                        ; reconfig    ;
+; reconfig/rtl/alt_pr_bitstream_host.v                               ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/rtl/alt_pr_bitstream_host.v                                     ; reconfig    ;
+; reconfig/rtl/alt_pr_bitstream_controller_v1.v                      ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/rtl/alt_pr_bitstream_controller_v1.v                            ; reconfig    ;
+; reconfig/rtl/alt_pr_cb_host.v                                      ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/rtl/alt_pr_cb_host.v                                            ; reconfig    ;
+; reconfig/rtl/alt_pr_cb_interface.v                                 ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/rtl/alt_pr_cb_interface.v                                       ; reconfig    ;
+; reconfig/rtl/alt_pr_cb_controller_v1.v                             ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/rtl/alt_pr_cb_controller_v1.v                                   ; reconfig    ;
+; reconfig/rtl/alt_pr_mux.sv                                         ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/reconfig/rtl/alt_pr_mux.sv                                               ; reconfig    ;
+; reconfig/rtl/alt_pr_jtag_interface.v                               ; yes             ; User Verilog HDL File              ; G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v                                     ; reconfig    ;
+; reconfig/rtl/alt_pr_width_adapter.sv                               ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/reconfig/rtl/alt_pr_width_adapter.sv                                     ; reconfig    ;
+; reconfig/rtl/alt_pr_bitstream_decoder.sv                           ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/reconfig/rtl/alt_pr_bitstream_decoder.sv                                 ; reconfig    ;
+; hex_view.sv                                                        ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/hex_view.sv                                                              ;             ;
+; persona/led_flash.sv                                               ; yes             ; User SystemVerilog HDL File        ; G:/NIR2/persona/led_flash.sv                                                     ;             ;
+; scfifo.tdf                                                         ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/scfifo.tdf                        ;             ;
+; a_regfifo.inc                                                      ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/a_regfifo.inc                     ;             ;
+; a_dpfifo.inc                                                       ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/a_dpfifo.inc                      ;             ;
+; a_i2fifo.inc                                                       ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/a_i2fifo.inc                      ;             ;
+; a_fffifo.inc                                                       ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/a_fffifo.inc                      ;             ;
+; a_f2fifo.inc                                                       ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/a_f2fifo.inc                      ;             ;
+; aglobal160.inc                                                     ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/aglobal160.inc                    ;             ;
+; db/scfifo_k011.tdf                                                 ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/scfifo_k011.tdf                                                       ;             ;
+; db/a_dpfifo_l661.tdf                                               ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/a_dpfifo_l661.tdf                                                     ;             ;
+; db/altsyncram_ndn1.tdf                                             ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/altsyncram_ndn1.tdf                                                   ;             ;
+; db/cmpr_1l8.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/cmpr_1l8.tdf                                                          ;             ;
+; db/cntr_egb.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/cntr_egb.tdf                                                          ;             ;
+; db/cntr_rg7.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/cntr_rg7.tdf                                                          ;             ;
+; db/cntr_fgb.tdf                                                    ; yes             ; Auto-Generated Megafunction        ; G:/NIR2/db/cntr_fgb.tdf                                                          ;             ;
+; lpm_shiftreg.tdf                                                   ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/lpm_shiftreg.tdf                  ;             ;
+; lpm_constant.inc                                                   ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/lpm_constant.inc                  ;             ;
+; dffeea.inc                                                         ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/dffeea.inc                        ;             ;
+; sld_virtual_jtag_basic.v                                           ; yes             ; Megafunction                       ; g:/altera/16.0/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v          ;             ;
+; sld_jtag_endpoint_adapter.vhd                                      ; yes             ; Encrypted Megafunction             ; g:/altera/16.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd     ;             ;
+; sld_jtag_endpoint_adapter_impl.sv                                  ; yes             ; Encrypted Megafunction             ; g:/altera/16.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv ;             ;
+; sld_hub.vhd                                                        ; yes             ; Encrypted Megafunction             ; g:/altera/16.0/quartus/libraries/megafunctions/sld_hub.vhd                       ; altera_sld  ;
+; db/ip/slda86494af/alt_sld_fab.v                                    ; yes             ; Encrypted Altera IP File           ; G:/NIR2/db/ip/slda86494af/alt_sld_fab.v                                          ; alt_sld_fab ;
+; db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab.v             ; yes             ; Encrypted Altera IP File           ; G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab.v                   ; alt_sld_fab ;
+; db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_ident.sv      ; yes             ; Auto-Found SystemVerilog HDL File  ; G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_ident.sv            ; alt_sld_fab ;
+; db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_presplit.sv   ; yes             ; Encrypted Altera IP File           ; G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_presplit.sv         ; alt_sld_fab ;
+; db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd ; yes             ; Encrypted Altera IP File           ; G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd       ; alt_sld_fab ;
+; db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_splitter.sv   ; yes             ; Encrypted Altera IP File           ; G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_splitter.sv         ; alt_sld_fab ;
+; sld_jtag_hub.vhd                                                   ; yes             ; Encrypted Megafunction             ; g:/altera/16.0/quartus/libraries/megafunctions/sld_jtag_hub.vhd                  ;             ;
+; sld_rom_sr.vhd                                                     ; yes             ; Encrypted Megafunction             ; g:/altera/16.0/quartus/libraries/megafunctions/sld_rom_sr.vhd                    ;             ;
++--------------------------------------------------------------------+-----------------+------------------------------------+----------------------------------------------------------------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                                                                                                                                                      ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                                                                                                                                                                                                          ; IP Include File ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                 ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                             ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_presplit:presplit   ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric ;                 ;
+; Altera ; Signal Tap   ; N/A     ; N/A          ; Licensed     ; |top|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_splitter:splitter   ;                 ;
+; Altera ; alt_pr       ; 16.0    ; N/A          ; N/A          ; |top|reconfig:reconfig_inst                                                                                                                                                                                                                                              ; reconfig.v      ;
++--------+--------------+---------+--------------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Partition Status Summary                                                      ;
++--------------------------+-------------+--------------------------------------+
+; Partition Name           ; Synthesized ; Reason                               ;
++--------------------------+-------------+--------------------------------------+
+; Top                      ; no          ; Netlist imported from a persona file ;
+; led_flash:led_flash_inst ; yes         ; netlist type = Source File           ;
++--------------------------+-------------+--------------------------------------+
+
+
++-----------------------------------------------+
+; Source assignments for Top-level Entity: |top ;
++-------------+--------------+------+-----------+
+; Assignment  ; Value        ; From ; To        ;
++-------------+--------------+------+-----------+
+; LOCATION    ; Pin_V18      ; -    ; leds[3]   ;
+; LOCATION    ; Pin_V17      ; -    ; leds[2]   ;
+; LOCATION    ; Pin_W16      ; -    ; leds[1]   ;
+; LOCATION    ; Pin_V16      ; -    ; leds[0]   ;
+; LOCATION    ; Pin_AH28     ; -    ; HEX[6]    ;
+; LOCATION    ; Pin_AG28     ; -    ; HEX[5]    ;
+; LOCATION    ; Pin_AF28     ; -    ; HEX[4]    ;
+; LOCATION    ; Pin_AG27     ; -    ; HEX[3]    ;
+; LOCATION    ; Pin_AE28     ; -    ; HEX[2]    ;
+; LOCATION    ; Pin_AE27     ; -    ; HEX[1]    ;
+; LOCATION    ; Pin_AE26     ; -    ; HEX[0]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; clk       ;
+; LOCATION    ; Pin_AF14     ; -    ; clk       ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; dir       ;
+; LOCATION    ; Pin_AB12     ; -    ; dir       ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; leds[3]   ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; leds[2]   ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; leds[1]   ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; leds[0]   ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[6]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[5]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[4]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[3]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[2]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[1]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; HEX[0]    ;
+; IO_STANDARD ; 3.3-V LVCMOS ; -    ; nreset    ;
+; LOCATION    ; Pin_Y16      ; -    ; nreset    ;
++-------------+--------------+------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|altsyncram_ndn1:FIFOram ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                                                                                               ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                                                                                                ;
++---------------------------------+--------------------+------+--------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst ;
++-------------------------------+-----------+----------------------------------------------+
+; Parameter Name                ; Value     ; Type                                         ;
++-------------------------------+-----------+----------------------------------------------+
+; PR_INTERNAL_HOST              ; 0         ; Signed Integer                               ;
+; CDRATIO                       ; 1         ; Signed Integer                               ;
+; DATA_WIDTH_INDEX              ; 16        ; Signed Integer                               ;
+; CB_DATA_WIDTH                 ; 16        ; Signed Integer                               ;
+; ENABLE_DATA_PACKING           ; 1         ; Signed Integer                               ;
+; ENABLE_AVMM_SLAVE             ; 0         ; Signed Integer                               ;
+; ENABLE_JTAG                   ; 1         ; Signed Integer                               ;
+; EDCRC_OSC_DIVIDER             ; 1         ; Signed Integer                               ;
+; DEVICE_FAMILY                 ; Cyclone V ; String                                       ;
+; EXT_HOST_TARGET_DEVICE_FAMILY ; Cyclone V ; String                                       ;
+; ENABLE_PRPOF_ID_CHECK         ; 0         ; Signed Integer                               ;
+; EXT_HOST_PRPOF_ID             ; 0         ; Signed Integer                               ;
+; ENABLE_ENHANCED_DECOMPRESSION ; 0         ; Signed Integer                               ;
+; INSTANTIATE_PR_BLOCK          ; 1         ; Signed Integer                               ;
+; INSTANTIATE_CRC_BLOCK         ; 1         ; Signed Integer                               ;
+; ENABLE_INTERRUPT              ; 0         ; Signed Integer                               ;
++-------------------------------+-----------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host ;
++-----------------------+-----------+------------------------------------------------------------------------------------+
+; Parameter Name        ; Value     ; Type                                                                               ;
++-----------------------+-----------+------------------------------------------------------------------------------------+
+; CDRATIO               ; 1         ; Signed Integer                                                                     ;
+; CB_DATA_WIDTH         ; 16        ; Signed Integer                                                                     ;
+; EDCRC_OSC_DIVIDER     ; 1         ; Signed Integer                                                                     ;
+; DEVICE_FAMILY         ; Cyclone V ; String                                                                             ;
+; INSTANTIATE_PR_BLOCK  ; 0         ; Unsigned Binary                                                                    ;
+; INSTANTIATE_CRC_BLOCK ; 0         ; Unsigned Binary                                                                    ;
++-----------------------+-----------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1 ;
++-----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name        ; Value     ; Type                                                                                                                               ;
++-----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------+
+; CDRATIO               ; 1         ; Signed Integer                                                                                                                     ;
+; CB_DATA_WIDTH         ; 16        ; Signed Integer                                                                                                                     ;
+; EDCRC_OSC_DIVIDER     ; 1         ; Signed Integer                                                                                                                     ;
+; DEVICE_FAMILY         ; Cyclone V ; String                                                                                                                             ;
+; INSTANTIATE_PR_BLOCK  ; 0         ; Unsigned Binary                                                                                                                    ;
+; INSTANTIATE_CRC_BLOCK ; 0         ; Unsigned Binary                                                                                                                    ;
++-----------------------+-----------+------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1|alt_pr_cb_interface:alt_pr_cb_interface ;
++-----------------------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name        ; Value     ; Type                                                                                                                                                                       ;
++-----------------------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CB_DATA_WIDTH         ; 16        ; Signed Integer                                                                                                                                                             ;
+; EDCRC_OSC_DIVIDER     ; 1         ; Signed Integer                                                                                                                                                             ;
+; DEVICE_FAMILY         ; Cyclone V ; String                                                                                                                                                                     ;
+; INSTANTIATE_PR_BLOCK  ; 0         ; Unsigned Binary                                                                                                                                                            ;
+; INSTANTIATE_CRC_BLOCK ; 0         ; Unsigned Binary                                                                                                                                                            ;
++-----------------------+-----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host ;
++-------------------------------+-----------+------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value     ; Type                                                                                     ;
++-------------------------------+-----------+------------------------------------------------------------------------------------------+
+; PR_INTERNAL_HOST              ; 0         ; Signed Integer                                                                           ;
+; CDRATIO                       ; 1         ; Signed Integer                                                                           ;
+; DONE_TO_END                   ; 7         ; Signed Integer                                                                           ;
+; CB_DATA_WIDTH                 ; 16        ; Signed Integer                                                                           ;
+; ENABLE_PRPOF_ID_CHECK         ; 0         ; Signed Integer                                                                           ;
+; EXT_HOST_PRPOF_ID             ; 0         ; Signed Integer                                                                           ;
+; DEVICE_FAMILY                 ; Cyclone V ; String                                                                                   ;
+; EXT_HOST_TARGET_DEVICE_FAMILY ; Cyclone V ; String                                                                                   ;
++-------------------------------+-----------+------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host|alt_pr_bitstream_controller_v1:alt_pr_bitstream_controller_v1 ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                                                                                      ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; CDRATIO        ; 1     ; Signed Integer                                                                                                                                                            ;
+; DONE_TO_END    ; 7     ; Signed Integer                                                                                                                                                            ;
+; CB_DATA_WIDTH  ; 16    ; Signed Integer                                                                                                                                                            ;
++----------------+-------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_decoder:alt_pr_bitstream_decoder ;
++-------------------------------+-------+----------------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value ; Type                                                                                               ;
++-------------------------------+-------+----------------------------------------------------------------------------------------------------+
+; DATA_WIDTH                    ; 16    ; Signed Integer                                                                                     ;
+; ENABLE_ENHANCED_DECOMPRESSION ; 0     ; Signed Integer                                                                                     ;
++-------------------------------+-------+----------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_mux:alt_pr_mux ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                  ;
++----------------+-------+---------------------------------------------------------------------------------------+
+; DATA_WIDTH     ; 16    ; Signed Integer                                                                        ;
++----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_width_adapter:jtag_input_width_adapter ;
++---------------------+-------+----------------------------------------------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                                                     ;
++---------------------+-------+----------------------------------------------------------------------------------------------------------+
+; SINK_DATA_WIDTH     ; 16    ; Signed Integer                                                                                           ;
+; SOURCE_DATA_WIDTH   ; 16    ; Signed Integer                                                                                           ;
+; ENABLE_DATA_PACKING ; 1     ; Signed Integer                                                                                           ;
++---------------------+-------+----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface ;
++-------------------------------+-------+----------------------------------------------------------------------------------------------+
+; Parameter Name                ; Value ; Type                                                                                         ;
++-------------------------------+-------+----------------------------------------------------------------------------------------------+
+; PR_INTERNAL_HOST              ; 0     ; Signed Integer                                                                               ;
+; SOURCE_DATA_WIDTH             ; 16    ; Signed Integer                                                                               ;
+; ENABLE_ENHANCED_DECOMPRESSION ; 0     ; Signed Integer                                                                               ;
++-------------------------------+-------+----------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component ;
++-------------------------+-------------+----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value       ; Type                                                                                                                 ;
++-------------------------+-------------+----------------------------------------------------------------------------------------------------------------------+
+; AUTO_CARRY_CHAINS       ; ON          ; AUTO_CARRY                                                                                                           ;
+; IGNORE_CARRY_BUFFERS    ; OFF         ; IGNORE_CARRY                                                                                                         ;
+; AUTO_CASCADE_CHAINS     ; ON          ; AUTO_CASCADE                                                                                                         ;
+; IGNORE_CASCADE_BUFFERS  ; OFF         ; IGNORE_CASCADE                                                                                                       ;
+; lpm_width               ; 16          ; Signed Integer                                                                                                       ;
+; LPM_NUMWORDS            ; 4           ; Signed Integer                                                                                                       ;
+; LPM_WIDTHU              ; 2           ; Untyped                                                                                                              ;
+; LPM_SHOWAHEAD           ; ON          ; Untyped                                                                                                              ;
+; UNDERFLOW_CHECKING      ; ON          ; Untyped                                                                                                              ;
+; OVERFLOW_CHECKING       ; ON          ; Untyped                                                                                                              ;
+; ALLOW_RWCYCLE_WHEN_FULL ; OFF         ; Untyped                                                                                                              ;
+; ADD_RAM_OUTPUT_REGISTER ; ON          ; Untyped                                                                                                              ;
+; ALMOST_FULL_VALUE       ; 0           ; Untyped                                                                                                              ;
+; ALMOST_EMPTY_VALUE      ; 0           ; Untyped                                                                                                              ;
+; ENABLE_ECC              ; FALSE       ; Untyped                                                                                                              ;
+; USE_EAB                 ; ON          ; Untyped                                                                                                              ;
+; MAXIMIZE_SPEED          ; 5           ; Untyped                                                                                                              ;
+; DEVICE_FAMILY           ; Cyclone V   ; Untyped                                                                                                              ;
+; OPTIMIZE_FOR_SPEED      ; 5           ; Untyped                                                                                                              ;
+; CBXI_PARAMETER          ; scfifo_k011 ; Untyped                                                                                                              ;
++-------------------------+-------------+----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|lpm_shiftreg:jtag_data_reg ;
++------------------------+-----------+----------------------------------------------------------------------------------------------------------------------------+
+; Parameter Name         ; Value     ; Type                                                                                                                       ;
++------------------------+-----------+----------------------------------------------------------------------------------------------------------------------------+
+; LPM_WIDTH              ; 16        ; Signed Integer                                                                                                             ;
+; LPM_DIRECTION          ; RIGHT     ; Untyped                                                                                                                    ;
+; LPM_AVALUE             ; UNUSED    ; Untyped                                                                                                                    ;
+; LPM_SVALUE             ; UNUSED    ; Untyped                                                                                                                    ;
+; DEVICE_FAMILY          ; Cyclone V ; Untyped                                                                                                                    ;
+; AUTO_CARRY_CHAINS      ; ON        ; AUTO_CARRY                                                                                                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF       ; IGNORE_CARRY                                                                                                               ;
+; AUTO_CASCADE_CHAINS    ; ON        ; AUTO_CASCADE                                                                                                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF       ; IGNORE_CASCADE                                                                                                             ;
++------------------------+-----------+----------------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module ;
++-------------------------+------------------------+-----------------------------------------------------------------------------------------------------------------------+
+; Parameter Name          ; Value                  ; Type                                                                                                                  ;
++-------------------------+------------------------+-----------------------------------------------------------------------------------------------------------------------+
+; sld_mfg_id              ; 110                    ; Signed Integer                                                                                                        ;
+; sld_type_id             ; 113                    ; Signed Integer                                                                                                        ;
+; sld_version             ; 2                      ; Signed Integer                                                                                                        ;
+; sld_instance_index      ; 0                      ; Signed Integer                                                                                                        ;
+; sld_auto_instance_index ; NO                     ; String                                                                                                                ;
+; sld_ir_width            ; 4                      ; Signed Integer                                                                                                        ;
+; sld_sim_n_scan          ; 0                      ; Signed Integer                                                                                                        ;
+; sld_sim_action          ; UNUSED                 ; String                                                                                                                ;
+; sld_sim_total_length    ; 0                      ; Signed Integer                                                                                                        ;
+; lpm_type                ; sld_virtual_jtag_basic ; String                                                                                                                ;
+; lpm_hint                ; UNUSED                 ; String                                                                                                                ;
++-------------------------+------------------------+-----------------------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_width_adapter:st_mm_input_width_adapter ;
++---------------------+-------+-----------------------------------------------------------------------------------------------------------+
+; Parameter Name      ; Value ; Type                                                                                                      ;
++---------------------+-------+-----------------------------------------------------------------------------------------------------------+
+; SINK_DATA_WIDTH     ; 16    ; Signed Integer                                                                                            ;
+; SOURCE_DATA_WIDTH   ; 16    ; Signed Integer                                                                                            ;
+; ENABLE_DATA_PACKING ; 1     ; Signed Integer                                                                                            ;
++---------------------+-------+-----------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                                                                       ;
++-----------------------------------------------------------+-----------------------+----------+----------------------------------+
+; File                                                      ; Location              ; Library  ; Checksum                         ;
++-----------------------------------------------------------+-----------------------+----------+----------------------------------+
+; reconfig.v                                                ; Project Directory     ; reconfig ; 474607f677561e0e88ea82d003aa72f8 ;
+; reconfig/alt_pr.v                                         ; Project Directory     ; reconfig ; 51010ea08477ccae5c59ffd09e706057 ;
+; reconfig/rtl/alt_pr_bitstream_controller_v1.v             ; Project Directory     ; reconfig ; 41dfa443a3d9cf07e2b3fed3a4637ae1 ;
+; reconfig/rtl/alt_pr_bitstream_decoder.sv                  ; Project Directory     ; reconfig ; d5ace52a836b359cecc30d8562507e41 ;
+; reconfig/rtl/alt_pr_bitstream_host.v                      ; Project Directory     ; reconfig ; 807ddd26f988c9aa1694d8b197b20cbb ;
+; reconfig/rtl/alt_pr_cb_controller_v1.v                    ; Project Directory     ; reconfig ; 40cdd88ecd28d19b75b4b7dcdb0a7d3c ;
+; reconfig/rtl/alt_pr_cb_host.v                             ; Project Directory     ; reconfig ; 087de861d3e23ca49ac23884978cc8b5 ;
+; reconfig/rtl/alt_pr_cb_interface.v                        ; Project Directory     ; reconfig ; 350a2add30f0c4603b586f472c1015e2 ;
+; reconfig/rtl/alt_pr_jtag_interface.v                      ; Project Directory     ; reconfig ; cc96e56170bd1213c6b00bad60992ad4 ;
+; reconfig/rtl/alt_pr_mux.sv                                ; Project Directory     ; reconfig ; 4fc3478c28ff5091c78b01d67800da8b ;
+; reconfig/rtl/alt_pr_width_adapter.sv                      ; Project Directory     ; reconfig ; 1a0ef519fa17bd716c9791825367bbad ;
+; libraries/megafunctions/a_dpfifo.inc                      ; Quartus Prime Install ; work     ; 37c2d0bb70d5a3f83a4aa09e62c75080 ;
+; libraries/megafunctions/a_f2fifo.inc                      ; Quartus Prime Install ; work     ; cebe3836bad826c95e765f77477e8a8b ;
+; libraries/megafunctions/a_fffifo.inc                      ; Quartus Prime Install ; work     ; aa34dd03c645beef0c31a3e4ef186db4 ;
+; libraries/megafunctions/a_i2fifo.inc                      ; Quartus Prime Install ; work     ; bfe272f05af0cf849bd8b4748efceffe ;
+; libraries/megafunctions/a_regfifo.inc                     ; Quartus Prime Install ; work     ; 8b2977668c08752c10a1f1977c9b9ee6 ;
+; libraries/megafunctions/aglobal160.inc                    ; Quartus Prime Install ; work     ; fb066d10587925b20740a2af26184ca9 ;
+; libraries/megafunctions/dffeea.inc                        ; Quartus Prime Install ; work     ; 0f11711657cd42ee78437f4349496034 ;
+; libraries/megafunctions/lpm_constant.inc                  ; Quartus Prime Install ; work     ; 97ffb7e3fef9ce9fce4eff08455d5da5 ;
+; libraries/megafunctions/lpm_shiftreg.tdf                  ; Quartus Prime Install ; work     ; 06fa0b549f7507c474cebd6f800415de ;
+; libraries/megafunctions/scfifo.tdf                        ; Quartus Prime Install ; work     ; 4a5d467648a6b5828c4d6f9ba22c13ce ;
+; libraries/megafunctions/sld_jtag_endpoint_adapter.vhd     ; Quartus Prime Install ; work     ; a9c177b31e0ef6a8916cc27a2e08aefe ;
+; libraries/megafunctions/sld_jtag_endpoint_adapter_impl.sv ; Quartus Prime Install ; work     ; 154952a3a2584426b43bcbf6bb31327a ;
+; libraries/megafunctions/sld_virtual_jtag_basic.v          ; Quartus Prime Install ; work     ; 5289098cd72438abaa16a96f82a9e4a3 ;
+; db/a_dpfifo_l661.tdf                                      ; Project Directory     ; work     ; f00049155b5933c0f2d8bb131377f489 ;
+; db/altsyncram_ndn1.tdf                                    ; Project Directory     ; work     ; aa69d25b0d3700bf9d1348927eeb3690 ;
+; db/cmpr_1l8.tdf                                           ; Project Directory     ; work     ; 9356b98cb6a764d77524944b08e6c4de ;
+; db/cntr_egb.tdf                                           ; Project Directory     ; work     ; 02ba5f784ee04e635d7c70df2afb2f5f ;
+; db/cntr_fgb.tdf                                           ; Project Directory     ; work     ; 57af709869255189fc823f8dab1e940b ;
+; db/cntr_rg7.tdf                                           ; Project Directory     ; work     ; d4f09ba769d415c7fc6a001e4a245226 ;
+; db/scfifo_k011.tdf                                        ; Project Directory     ; work     ; cb588c5abfbdc4296625c1d1e67d243f ;
+; freeze_region.sv                                          ; Project Directory     ; work     ; 888a927201acc742a7efa26ab6a8bc4c ;
+; hex_view.sv                                               ; Project Directory     ; work     ; 7fd5e3fd4197bb207cb6b95df18c0bd7 ;
+; led_wrapper.sv                                            ; Project Directory     ; work     ; c7cf51b7c726475b0b6c9c96c3e87463 ;
+; top.sv                                                    ; Project Directory     ; work     ; a5efd1f13c310b7715bbe6565dcb6048 ;
++-----------------------------------------------------------+-----------------------+----------+----------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition "led_flash:led_flash_inst" Resource Utilization by Entity                                                                                                                                                                                         ;
++---------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node            ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name   ; Library Name ;
++---------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+---------------+--------------+
+; |top                                  ; 42 (0)            ; 36 (0)       ; 0                 ; 0          ; 0    ; 0            ; |top                                                                                       ; top           ; work         ;
+;    |freeze_region:freeze_region_inst| ; 42 (0)            ; 36 (0)       ; 0                 ; 0          ; 0    ; 0            ; |top|freeze_region:freeze_region_inst                                                      ; freeze_region ; work         ;
+;       |led_wrapper:led_wrapper_int|   ; 42 (0)            ; 36 (0)       ; 0                 ; 0          ; 0    ; 0            ; |top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_int                          ; led_wrapper   ; work         ;
+;          |led_flash:led_flash_inst|   ; 42 (42)           ; 36 (36)      ; 0                 ; 0          ; 0    ; 0            ; |top|freeze_region:freeze_region_inst|led_wrapper:led_wrapper_int|led_flash:led_flash_inst ; led_flash     ; work         ;
++---------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+--------------------------------------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------+
+; Partition Dependent Files                                                             ;
++----------------------+-------------------+---------+----------------------------------+
+; File                 ; Location          ; Library ; Checksum                         ;
++----------------------+-------------------+---------+----------------------------------+
+; persona/led_flash.sv ; Project Directory ; work    ; c1b91d2173798ba340e82d4714453441 ;
++----------------------+-------------------+---------+----------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Partition led_flash:led_flash_inst ;
++-----------------------+--------------------------------------------------+
+; Type                  ; Count                                            ;
++-----------------------+--------------------------------------------------+
+; arriav_ff             ; 36                                               ;
+;     ENA               ; 4                                                ;
+;     SCLR              ; 32                                               ;
+; arriav_lcell_comb     ; 42                                               ;
+;     arith             ; 32                                               ;
+;         1 data inputs ; 32                                               ;
+;     normal            ; 10                                               ;
+;         1 data inputs ; 2                                                ;
+;         4 data inputs ; 4                                                ;
+;         5 data inputs ; 4                                                ;
+; boundary_port         ; 6                                                ;
+;                       ;                                                  ;
+; Max LUT depth         ; 4.10                                             ;
+; Average LUT depth     ; 2.97                                             ;
++-----------------------+--------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "reconfig:reconfig_inst"                                                                                                                            ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                      ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; pr_start   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; double_pr  ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; status     ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; data       ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; data_valid ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; data_ready ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------+
+; Elapsed Time Per Partition              ;
++--------------------------+--------------+
+; Partition Name           ; Elapsed Time ;
++--------------------------+--------------+
+; led_flash:led_flash_inst ; 00:00:00     ;
++--------------------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 16.0.0 Build 211 04/27/2016 SJ Standard Edition
+    Info: Processing started: Fri Apr 20 18:48:51 2018
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top -c persona
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file led_wrapper.sv
+    Info (12023): Found entity 1: led_wrapper File: G:/NIR2/led_wrapper.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file freeze_region.sv
+    Info (12023): Found entity 1: freeze_region File: G:/NIR2/freeze_region.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reconf.v
+    Info (12023): Found entity 1: reconf File: G:/NIR2/reconf.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/alt_pr.v
+    Info (12023): Found entity 1: alt_pr File: G:/NIR2/reconf/alt_pr.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_bitstream_host.v
+    Info (12023): Found entity 1: alt_pr_bitstream_host File: G:/NIR2/reconf/rtl/alt_pr_bitstream_host.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_bitstream_controller_v1.v
+    Info (12023): Found entity 1: alt_pr_bitstream_controller_v1 File: G:/NIR2/reconf/rtl/alt_pr_bitstream_controller_v1.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_bitstream_controller_v2.v
+    Info (12023): Found entity 1: alt_pr_bitstream_controller_v2 File: G:/NIR2/reconf/rtl/alt_pr_bitstream_controller_v2.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_cb_host.v
+    Info (12023): Found entity 1: alt_pr_cb_host File: G:/NIR2/reconf/rtl/alt_pr_cb_host.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_cb_interface.v
+    Info (12023): Found entity 1: alt_pr_cb_interface File: G:/NIR2/reconf/rtl/alt_pr_cb_interface.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_cb_controller_v1.v
+    Info (12023): Found entity 1: alt_pr_cb_controller_v1 File: G:/NIR2/reconf/rtl/alt_pr_cb_controller_v1.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_cb_controller_v2.v
+    Info (12023): Found entity 1: alt_pr_cb_controller_v2 File: G:/NIR2/reconf/rtl/alt_pr_cb_controller_v2.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_mux.sv
+    Info (12023): Found entity 1: alt_pr_mux File: G:/NIR2/reconf/rtl/alt_pr_mux.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_jtag_interface.v
+    Info (12023): Found entity 1: alt_pr_jtag_interface File: G:/NIR2/reconf/rtl/alt_pr_jtag_interface.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_width_adapter.sv
+    Info (12023): Found entity 1: alt_pr_width_adapter File: G:/NIR2/reconf/rtl/alt_pr_width_adapter.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_bitstream_compatibility_checker_int_host.v
+    Info (12023): Found entity 1: alt_pr_bitstream_compatibility_checker_int_host File: G:/NIR2/reconf/rtl/alt_pr_bitstream_compatibility_checker_int_host.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_bitstream_compatibility_checker_ext_host.v
+    Info (12023): Found entity 1: alt_pr_bitstream_compatibility_checker_ext_host File: G:/NIR2/reconf/rtl/alt_pr_bitstream_compatibility_checker_ext_host.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file reconf/rtl/alt_pr_down_converter.sv
+    Info (12023): Found entity 1: alt_pr_down_converter File: G:/NIR2/reconf/rtl/alt_pr_down_converter.sv Line: 15
+    Info (12023): Found entity 2: alt_pr_down_converter_from_pfl File: G:/NIR2/reconf/rtl/alt_pr_down_converter.sv Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_fifo.sv
+    Info (12023): Found entity 1: alt_pr_fifo File: G:/NIR2/reconf/rtl/alt_pr_fifo.sv Line: 15
+Info (12021): Found 2 design units, including 2 entities, in source file reconf/rtl/alt_pr_up_converter.sv
+    Info (12023): Found entity 1: alt_pr_up_converter File: G:/NIR2/reconf/rtl/alt_pr_up_converter.sv Line: 20
+    Info (12023): Found entity 2: alt_pr_up_converter_from_pfl File: G:/NIR2/reconf/rtl/alt_pr_up_converter.sv Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_bitstream_decoder.sv
+    Info (12023): Found entity 1: alt_pr_bitstream_decoder File: G:/NIR2/reconf/rtl/alt_pr_bitstream_decoder.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_enhanced_compression_magic_words_decoder_and_suppressor.sv
+    Info (12023): Found entity 1: alt_pr_enhanced_compression_magic_words_decoder_and_suppressor File: G:/NIR2/reconf/rtl/alt_pr_enhanced_compression_magic_words_decoder_and_suppressor.sv Line: 15
+Info (12021): Found 2 design units, including 2 entities, in source file reconf/rtl/alt_pr_enhanced_decompressor.sv
+    Info (12023): Found entity 1: alt_pr_enhanced_decompressor File: G:/NIR2/reconf/rtl/alt_pr_enhanced_decompressor.sv Line: 15
+    Info (12023): Found entity 2: alt_pr_cfg_speed2_decompressor_cb32 File: G:/NIR2/reconf/rtl/alt_pr_enhanced_decompressor.sv Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_magic_fifo.sv
+    Info (12023): Found entity 1: alt_pr_magic_fifo File: G:/NIR2/reconf/rtl/alt_pr_magic_fifo.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file reconf/rtl/alt_pr_data.sv
+    Info (12023): Found entity 1: alt_pr_data File: G:/NIR2/reconf/rtl/alt_pr_data.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file top.sv
+    Info (12023): Found entity 1: top File: G:/NIR2/top.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig.v
+    Info (12023): Found entity 1: reconfig File: G:/NIR2/reconfig.v Line: 8
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/alt_pr.v
+    Info (12023): Found entity 1: alt_pr File: G:/NIR2/reconfig/alt_pr.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_bitstream_host.v
+    Info (12023): Found entity 1: alt_pr_bitstream_host File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_host.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_bitstream_controller_v1.v
+    Info (12023): Found entity 1: alt_pr_bitstream_controller_v1 File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_controller_v1.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_bitstream_controller_v2.v
+    Info (12023): Found entity 1: alt_pr_bitstream_controller_v2 File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_controller_v2.v Line: 18
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_cb_host.v
+    Info (12023): Found entity 1: alt_pr_cb_host File: G:/NIR2/reconfig/rtl/alt_pr_cb_host.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_cb_interface.v
+    Info (12023): Found entity 1: alt_pr_cb_interface File: G:/NIR2/reconfig/rtl/alt_pr_cb_interface.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_cb_controller_v1.v
+    Info (12023): Found entity 1: alt_pr_cb_controller_v1 File: G:/NIR2/reconfig/rtl/alt_pr_cb_controller_v1.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_cb_controller_v2.v
+    Info (12023): Found entity 1: alt_pr_cb_controller_v2 File: G:/NIR2/reconfig/rtl/alt_pr_cb_controller_v2.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_mux.sv
+    Info (12023): Found entity 1: alt_pr_mux File: G:/NIR2/reconfig/rtl/alt_pr_mux.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_jtag_interface.v
+    Info (12023): Found entity 1: alt_pr_jtag_interface File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_width_adapter.sv
+    Info (12023): Found entity 1: alt_pr_width_adapter File: G:/NIR2/reconfig/rtl/alt_pr_width_adapter.sv Line: 14
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_bitstream_compatibility_checker_int_host.v
+    Info (12023): Found entity 1: alt_pr_bitstream_compatibility_checker_int_host File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_compatibility_checker_int_host.v Line: 16
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_bitstream_compatibility_checker_ext_host.v
+    Info (12023): Found entity 1: alt_pr_bitstream_compatibility_checker_ext_host File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_compatibility_checker_ext_host.v Line: 16
+Info (12021): Found 2 design units, including 2 entities, in source file reconfig/rtl/alt_pr_down_converter.sv
+    Info (12023): Found entity 1: alt_pr_down_converter File: G:/NIR2/reconfig/rtl/alt_pr_down_converter.sv Line: 15
+    Info (12023): Found entity 2: alt_pr_down_converter_from_pfl File: G:/NIR2/reconfig/rtl/alt_pr_down_converter.sv Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_fifo.sv
+    Info (12023): Found entity 1: alt_pr_fifo File: G:/NIR2/reconfig/rtl/alt_pr_fifo.sv Line: 15
+Info (12021): Found 2 design units, including 2 entities, in source file reconfig/rtl/alt_pr_up_converter.sv
+    Info (12023): Found entity 1: alt_pr_up_converter File: G:/NIR2/reconfig/rtl/alt_pr_up_converter.sv Line: 20
+    Info (12023): Found entity 2: alt_pr_up_converter_from_pfl File: G:/NIR2/reconfig/rtl/alt_pr_up_converter.sv Line: 68
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_bitstream_decoder.sv
+    Info (12023): Found entity 1: alt_pr_bitstream_decoder File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_decoder.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_enhanced_compression_magic_words_decoder_and_suppressor.sv
+    Info (12023): Found entity 1: alt_pr_enhanced_compression_magic_words_decoder_and_suppressor File: G:/NIR2/reconfig/rtl/alt_pr_enhanced_compression_magic_words_decoder_and_suppressor.sv Line: 15
+Info (12021): Found 2 design units, including 2 entities, in source file reconfig/rtl/alt_pr_enhanced_decompressor.sv
+    Info (12023): Found entity 1: alt_pr_enhanced_decompressor File: G:/NIR2/reconfig/rtl/alt_pr_enhanced_decompressor.sv Line: 15
+    Info (12023): Found entity 2: alt_pr_cfg_speed2_decompressor_cb32 File: G:/NIR2/reconfig/rtl/alt_pr_enhanced_decompressor.sv Line: 53
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_magic_fifo.sv
+    Info (12023): Found entity 1: alt_pr_magic_fifo File: G:/NIR2/reconfig/rtl/alt_pr_magic_fifo.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file reconfig/rtl/alt_pr_data.sv
+    Info (12023): Found entity 1: alt_pr_data File: G:/NIR2/reconfig/rtl/alt_pr_data.sv Line: 15
+Info (12021): Found 1 design units, including 1 entities, in source file hex_view.sv
+    Info (12023): Found entity 1: hex_view File: G:/NIR2/hex_view.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file persona/led_flash.sv
+    Info (12023): Found entity 1: led_flash File: G:/NIR2/persona/led_flash.sv Line: 1
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "hex_view" for hierarchy "hex_view:hex_view_inst" File: G:/NIR2/top.sv Line: 25
+Warning (10230): Verilog HDL assignment warning at hex_view.sv(42): truncated value with size 32 to match size of target (5) File: G:/NIR2/hex_view.sv Line: 42
+Warning (10030): Net "ss_arr.data_a" at hex_view.sv(7) has no driver or initial value, using a default initial value '0' File: G:/NIR2/hex_view.sv Line: 7
+Warning (10030): Net "ss_arr.waddr_a" at hex_view.sv(7) has no driver or initial value, using a default initial value '0' File: G:/NIR2/hex_view.sv Line: 7
+Warning (10030): Net "ss_arr.we_a" at hex_view.sv(7) has no driver or initial value, using a default initial value '0' File: G:/NIR2/hex_view.sv Line: 7
+Info (12128): Elaborating entity "reconfig" for hierarchy "reconfig:reconfig_inst" File: G:/NIR2/top.sv Line: 60
+Info (12128): Elaborating entity "alt_pr" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst" File: G:/NIR2/reconfig.v Line: 68
+Info (12128): Elaborating entity "alt_pr_cb_host" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host" File: G:/NIR2/reconfig/alt_pr.v Line: 278
+Info (12128): Elaborating entity "alt_pr_cb_controller_v1" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1" File: G:/NIR2/reconfig/rtl/alt_pr_cb_host.v Line: 89
+Info (12128): Elaborating entity "alt_pr_cb_interface" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1|alt_pr_cb_interface:alt_pr_cb_interface" File: G:/NIR2/reconfig/rtl/alt_pr_cb_controller_v1.v Line: 120
+Info (12128): Elaborating entity "alt_pr_bitstream_host" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host" File: G:/NIR2/reconfig/alt_pr.v Line: 304
+Info (12128): Elaborating entity "alt_pr_bitstream_controller_v1" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host|alt_pr_bitstream_controller_v1:alt_pr_bitstream_controller_v1" File: G:/NIR2/reconfig/rtl/alt_pr_bitstream_host.v Line: 142
+Info (12128): Elaborating entity "alt_pr_bitstream_decoder" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_decoder:alt_pr_bitstream_decoder" File: G:/NIR2/reconfig/alt_pr.v Line: 325
+Info (12128): Elaborating entity "alt_pr_mux" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_mux:alt_pr_mux" File: G:/NIR2/reconfig/alt_pr.v Line: 343
+Info (12128): Elaborating entity "alt_pr_width_adapter" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_width_adapter:jtag_input_width_adapter" File: G:/NIR2/reconfig/alt_pr.v Line: 359
+Info (12128): Elaborating entity "alt_pr_jtag_interface" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface" File: G:/NIR2/reconfig/alt_pr.v Line: 380
+Info (12128): Elaborating entity "scfifo" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component" File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 265
+Info (12130): Elaborated megafunction instantiation "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component" File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 265
+Info (12133): Instantiated megafunction "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component" with the following parameter: File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 265
+    Info (12134): Parameter "add_ram_output_register" = "ON"
+    Info (12134): Parameter "lpm_numwords" = "4"
+    Info (12134): Parameter "lpm_showahead" = "ON"
+    Info (12134): Parameter "lpm_type" = "scfifo"
+    Info (12134): Parameter "lpm_width" = "16"
+Info (12021): Found 1 design units, including 1 entities, in source file db/scfifo_k011.tdf
+    Info (12023): Found entity 1: scfifo_k011 File: G:/NIR2/db/scfifo_k011.tdf Line: 25
+Info (12128): Elaborating entity "scfifo_k011" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated" File: g:/altera/16.0/quartus/libraries/megafunctions/scfifo.tdf Line: 300
+Info (12021): Found 1 design units, including 1 entities, in source file db/a_dpfifo_l661.tdf
+    Info (12023): Found entity 1: a_dpfifo_l661 File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 33
+Info (12128): Elaborating entity "a_dpfifo_l661" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo" File: G:/NIR2/db/scfifo_k011.tdf Line: 38
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ndn1.tdf
+    Info (12023): Found entity 1: altsyncram_ndn1 File: G:/NIR2/db/altsyncram_ndn1.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_ndn1" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|altsyncram_ndn1:FIFOram" File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 46
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_1l8.tdf
+    Info (12023): Found entity 1: cmpr_1l8 File: G:/NIR2/db/cmpr_1l8.tdf Line: 23
+Info (12128): Elaborating entity "cmpr_1l8" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|cmpr_1l8:almost_full_comparer" File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 55
+Info (12128): Elaborating entity "cmpr_1l8" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|cmpr_1l8:three_comparison" File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 56
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_egb.tdf
+    Info (12023): Found entity 1: cntr_egb File: G:/NIR2/db/cntr_egb.tdf Line: 26
+Info (12128): Elaborating entity "cntr_egb" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|cntr_egb:rd_ptr_msb" File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 57
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_rg7.tdf
+    Info (12023): Found entity 1: cntr_rg7 File: G:/NIR2/db/cntr_rg7.tdf Line: 26
+Info (12128): Elaborating entity "cntr_rg7" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|cntr_rg7:usedw_counter" File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 58
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_fgb.tdf
+    Info (12023): Found entity 1: cntr_fgb File: G:/NIR2/db/cntr_fgb.tdf Line: 26
+Info (12128): Elaborating entity "cntr_fgb" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|scfifo:scfifo_component|scfifo_k011:auto_generated|a_dpfifo_l661:dpfifo|cntr_fgb:wr_ptr" File: G:/NIR2/db/a_dpfifo_l661.tdf Line: 59
+Info (12128): Elaborating entity "lpm_shiftreg" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|lpm_shiftreg:jtag_data_reg" File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 280
+Info (12130): Elaborated megafunction instantiation "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|lpm_shiftreg:jtag_data_reg" File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 280
+Info (12133): Instantiated megafunction "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|lpm_shiftreg:jtag_data_reg" with the following parameter: File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 280
+    Info (12134): Parameter "lpm_type" = "LPM_SHIFTREG"
+    Info (12134): Parameter "lpm_width" = "16"
+    Info (12134): Parameter "lpm_direction" = "RIGHT"
+Info (12128): Elaborating entity "sld_virtual_jtag_basic" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module" File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 295
+Info (12130): Elaborated megafunction instantiation "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module" File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 295
+Info (12133): Instantiated megafunction "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module" with the following parameter: File: G:/NIR2/reconfig/rtl/alt_pr_jtag_interface.v Line: 295
+    Info (12134): Parameter "sld_ir_width" = "4"
+    Info (12134): Parameter "sld_version" = "2"
+    Info (12134): Parameter "sld_type_id" = "113"
+    Info (12134): Parameter "sld_mfg_id" = "110"
+    Info (12134): Parameter "sld_instance_index" = "0"
+Info (12128): Elaborating entity "sld_virtual_jtag_impl" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst" File: g:/altera/16.0/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12131): Elaborated megafunction instantiation "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst", which is child of megafunction instantiation "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module" File: g:/altera/16.0/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 152
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter" File: g:/altera/16.0/quartus/libraries/megafunctions/sld_virtual_jtag_basic.v Line: 415
+Info (12128): Elaborating entity "sld_jtag_endpoint_adapter_impl" for hierarchy "reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_jtag_interface:alt_pr_jtag_interface|sld_virtual_jtag_basic:vjtag_module|sld_virtual_jtag_impl:sld_virtual_jtag_impl_inst|sld_jtag_endpoint_adapter:jtag_signal_adapter|sld_jtag_endpoint_adapter_impl:sld_jtag_endpoint_adapter_impl_inst" File: g:/altera/16.0/quartus/libraries/megafunctions/sld_jtag_endpoint_adapter.vhd Line: 228
+Info (12128): Elaborating entity "freeze_region" for hierarchy "freeze_region:freeze_region_inst" File: G:/NIR2/top.sv Line: 68
+Info (12128): Elaborating entity "led_wrapper" for hierarchy "freeze_region:freeze_region_inst|led_wrapper:led_wrapper_int" File: G:/NIR2/freeze_region.sv Line: 13
+Info (12128): Elaborating entity "led_flash" for hierarchy "freeze_region:freeze_region_inst|led_wrapper:led_wrapper_int|led_flash:led_flash_inst" File: G:/NIR2/led_wrapper.sv Line: 11
+Info (11170): Start IP generation for the debug fabric within sld_hub.
+Info (11172): 2018.04.20.19:49:26 Progress: Loading slda86494af/alt_sld_fab_wrapper_hw.tcl
+Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
+Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
+Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
+Info (11172): Presplit: "alt_sld_fab" instantiated altera_super_splitter "presplit"
+Info (11172): Splitter: "alt_sld_fab" instantiated altera_sld_splitter "splitter"
+Info (11172): Sldfabric: "alt_sld_fab" instantiated altera_sld_jtag_hub "sldfabric"
+Info (11172): Ident: "alt_sld_fab" instantiated altera_connection_identification_hub "ident"
+Info (11172): Alt_sld_fab: Done "alt_sld_fab" with 6 modules, 6 files
+Info (11171): Finished IP generation for the debug fabric within sld_hub.
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda86494af/alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab File: G:/NIR2/db/ip/slda86494af/alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab.v
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab File: G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_ident.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_ident File: G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_ident.sv Line: 33
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_presplit.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_presplit File: G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_presplit.sv Line: 3
+Info (12021): Found 2 design units, including 1 entities, in source file db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd
+    Info (12022): Found design unit 1: alt_sld_fab_alt_sld_fab_sldfabric-rtl File: G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 93
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_sldfabric File: G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_sldfabric.vhd Line: 11
+Info (12021): Found 1 design units, including 1 entities, in source file db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
+    Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: G:/NIR2/db/ip/slda86494af/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
+Info (12205): 1 design partition requires Analysis and Synthesis
+    Info (12210): Partition "led_flash:led_flash_inst" requires synthesis because its netlist type is Source File
+Info (12207): 1 design partition does not require synthesis
+    Info (12226): Partition "Top" does not require synthesis because it has an input persona
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (281019): Starting Logic Optimization and Technology Mapping for Partition led_flash:led_flash_inst File: G:/NIR2/led_wrapper.sv Line: 11
+Info (286031): Timing-Driven Synthesis is running on partition "led_flash:led_flash_inst"
+Info (21057): Implemented 50 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 44 logic cells
+Warning (20013): Ignored 16 assignments for entity "reconf" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_NAME alt_pr -entity reconf -sip reconf.sip -library lib_reconf was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_VERSION 16.0 -entity reconf -sip reconf.sip -library lib_reconf was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name IP_TOOL_ENV mwpim -entity reconf -sip reconf.sip -library lib_reconf was ignored
+Info (144001): Generated suppressed messages file G:/NIR2/output_files/persona.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 968 megabytes
+    Info: Processing ended: Fri Apr 20 18:49:41 2018
+    Info: Elapsed time: 00:00:50
+    Info: Total CPU time (on all processors): 00:01:41
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in G:/NIR2/output_files/persona.map.smsg.
+
+

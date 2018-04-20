@@ -1,0 +1,32 @@
+module led_flash
+(
+	input clk,
+	input dir,
+	output reg [3:0] leds
+);
+
+reg [31:0] cycle_cnt;
+wire wraparound;
+assign wraparound = (cycle_cnt >= 32'h4ffffff);
+
+always @(posedge clk)
+begin
+
+if (wraparound)
+begin
+	if ((leds == 4'b0000) || (leds==4'b1000) && dir)
+		leds <= 4'b0001;
+		else
+	if ((leds == 4'b0000) || (leds==4'b0001) && !dir)
+		leds <= 4'b1000;
+		else
+		if (dir)
+			leds <= leds << 1;
+		else
+			leds <= leds >> 1;
+	cycle_cnt <= 0;
+end
+
+end
+
+endmodule

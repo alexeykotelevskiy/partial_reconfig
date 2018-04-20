@@ -1,0 +1,16 @@
+module top(
+	input clk,
+	input dir,
+	output [3:0] leds
+
+);
+
+led_wrapper led_wrapper_inst(
+	.clk(clk),
+	.dir(die),
+	.leds(leds)
+);
+
+
+
+endmodule;

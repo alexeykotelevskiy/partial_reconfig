@@ -1,0 +1,21 @@
+	component reconf is
+		port (
+			clk            : in  std_logic                     := 'X';             -- clk
+			nreset         : in  std_logic                     := 'X';             -- reset_n
+			pr_start       : in  std_logic                     := 'X';             -- pr_start
+			double_pr      : in  std_logic                     := 'X';             -- double_pr
+			freeze         : out std_logic;                                        -- freeze
+			status         : out std_logic_vector(2 downto 0);                     -- status
+			pr_ready_pin   : in  std_logic                     := 'X';             -- pr_ready_pin
+			pr_done_pin    : in  std_logic                     := 'X';             -- pr_done_pin
+			pr_error_pin   : in  std_logic                     := 'X';             -- pr_error_pin
+			crc_error_pin  : in  std_logic                     := 'X';             -- crc_error_pin
+			pr_request_pin : out std_logic;                                        -- pr_request_pin
+			pr_clk_pin     : out std_logic;                                        -- pr_clk_pin
+			pr_data_pin    : out std_logic_vector(15 downto 0);                    -- pr_data_pin
+			data           : in  std_logic_vector(15 downto 0) := (others => 'X'); -- data
+			data_valid     : in  std_logic                     := 'X';             -- valid
+			data_ready     : out std_logic                                         -- ready
+		);
+	end component reconf;
+

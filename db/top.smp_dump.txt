@@ -1,0 +1,18 @@
+
+State Machine - |top|reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_bitstream_host:alt_pr_bitstream_host|alt_pr_bitstream_controller_v1:alt_pr_bitstream_controller_v1|bitstream_state
+Name bitstream_state.IDLE bitstream_state.SEND_PR_DATA bitstream_state.WAIT_FOR_READY 
+bitstream_state.IDLE 0 0 0 
+bitstream_state.WAIT_FOR_READY 1 0 1 
+bitstream_state.SEND_PR_DATA 1 1 0 
+
+State Machine - |top|reconfig:reconfig_inst|alt_pr:reconfig_inst|alt_pr_cb_host:alt_pr_cb_host|alt_pr_cb_controller_v1:alt_pr_cb_controller_v1|pr_state
+Name pr_state.WAIT_CRC_ERROR_TO_LAST_CLOCK pr_state.WAIT_CRC_COMPUTE_EMR_TIME pr_state.WAIT_PR_ERROR_TO_LAST_CLOCK pr_state.WAIT_DONE_TO_LAST_CLOCK pr_state.SEND_PR_DATA pr_state.WAIT_FOR_PR_READY pr_state.WAIT_TO_ASSERT_REQUEST pr_state.IDLE pr_state.PR_PROCESS_DONE 
+pr_state.IDLE 0 0 0 0 0 0 0 0 0 
+pr_state.WAIT_TO_ASSERT_REQUEST 0 0 0 0 0 0 1 1 0 
+pr_state.WAIT_FOR_PR_READY 0 0 0 0 0 1 0 1 0 
+pr_state.SEND_PR_DATA 0 0 0 0 1 0 0 1 0 
+pr_state.WAIT_DONE_TO_LAST_CLOCK 0 0 0 1 0 0 0 1 0 
+pr_state.WAIT_PR_ERROR_TO_LAST_CLOCK 0 0 1 0 0 0 0 1 0 
+pr_state.WAIT_CRC_COMPUTE_EMR_TIME 0 1 0 0 0 0 0 1 0 
+pr_state.WAIT_CRC_ERROR_TO_LAST_CLOCK 1 0 0 0 0 0 0 1 0 
+pr_state.PR_PROCESS_DONE 0 0 0 0 0 0 0 1 1 

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pinplan
+ variation_name="reconf"
+ megafunction_name="ALT_PR"
+ intended_family="Cyclone V"
+ specifies="all_ports">
+ <global>
+  <pin name="clk" direction="input" scope="external" />
+  <pin name="nreset" direction="input" scope="external" />
+  <pin name="pr_start" direction="input" scope="external" />
+  <pin name="double_pr" direction="input" scope="external" />
+  <pin name="freeze" direction="output" scope="external" />
+  <pin name="status[2..0]" direction="output" scope="external" />
+  <pin name="pr_ready_pin" direction="input" scope="external" />
+  <pin name="pr_done_pin" direction="input" scope="external" />
+  <pin name="pr_error_pin" direction="input" scope="external" />
+  <pin name="crc_error_pin" direction="input" scope="external" />
+  <pin name="pr_request_pin" direction="output" scope="external" />
+  <pin name="pr_clk_pin" direction="output" scope="external" />
+  <pin name="pr_data_pin[15..0]" direction="output" scope="external" />
+  <pin name="data[15..0]" direction="input" scope="external" />
+  <pin name="data_valid" direction="input" scope="external" />
+  <pin name="data_ready" direction="output" scope="external" />
+ </global>
+</pinplan>

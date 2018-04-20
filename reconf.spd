@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+ <file path="reconf_sim/alt_pr/alt_pr.v" type="VERILOG" library="reconf" />
+ <file path="reconf_sim/reconf.v" type="VERILOG" />
+ <topLevel name="reconf" />
+ <deviceFamily name="cyclonev" />
+</simPackage>

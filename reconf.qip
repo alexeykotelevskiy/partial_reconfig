@@ -1,0 +1,61 @@
+set_global_assignment -entity "reconf" -library "reconf" -name IP_TOOL_NAME "alt_pr"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_TOOL_VERSION "16.0"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_TOOL_ENV "mwpim"
+set_global_assignment -library "reconf" -name MISC_FILE [file join $::quartus(qip_path) "reconf.cmp"]
+set_global_assignment -entity "reconf" -library "reconf" -name IP_TARGETED_DEVICE_FAMILY "Cyclone V"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_GENERATED_DEVICE_FAMILY "{Cyclone V}"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_QSYS_MODE "UNKNOWN"
+set_global_assignment -name SYNTHESIS_ONLY_QIP ON
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_NAME "cmVjb25m"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_DISPLAY_NAME "UGFydGlhbCBSZWNvbmZpZ3VyYXRpb24="
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_VERSION "MTYuMA=="
+set_global_assignment -entity "reconf" -library "reconf" -name IP_COMPONENT_DESCRIPTION "UGFydGlhbCBSZWNvbmZpZ3VyYXRpb24gbWVnYWZ1bmN0aW9uIGlzIHVzZWQgdG8gcmVjb25maWd1cmUgcGFydCBvZiB5b3VyIGRlc2lnbiB3aGlsZSB0aGUgcmVzdCAgb2YgeW91ciBkZXNpZ24gY29udGludWVzIHRvIHJ1bi4="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_NAME "YWx0X3By"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_DISPLAY_NAME "UGFydGlhbCBSZWNvbmZpZ3VyYXRpb24="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_REPORT_HIERARCHY "Off"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_INTERNAL "Off"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_AUTHOR "QWx0ZXJhIENvcnBvcmF0aW9u"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_VERSION "MTYuMA=="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_DESCRIPTION "UGFydGlhbCBSZWNvbmZpZ3VyYXRpb24gbWVnYWZ1bmN0aW9uIGlzIHVzZWQgdG8gcmVjb25maWd1cmUgcGFydCBvZiB5b3VyIGRlc2lnbiB3aGlsZSB0aGUgcmVzdCAgb2YgeW91ciBkZXNpZ24gY29udGludWVzIHRvIHJ1bi4="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "UFJfSU5URVJOQUxfSE9TVA==::ZmFsc2U=::VXNlIGFzIFBSIEludGVybmFsIEhvc3Q="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RU5BQkxFX0pUQUc=::dHJ1ZQ==::RW5hYmxlIEpUQUcgZGVidWcgbW9kZQ=="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RU5BQkxFX0FWTU1fU0xBVkU=::ZmFsc2U=::RW5hYmxlIEF2YWxvbi1NTSBzbGF2ZSBpbnRlcmZhY2U="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RU5BQkxFX1BSUE9GX0lEX0NIRUNLX1VJ::ZmFsc2U=::RW5hYmxlIGJpdHN0cmVhbSBjb21wYXRpYmlsaXR5IGNoZWNr"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RU5BQkxFX1BSUE9GX0lEX0NIRUNL::ZmFsc2U=::RU5BQkxFX1BSUE9GX0lEX0NIRUNL"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RVhUX0hPU1RfVEFSR0VUX0RFVklDRV9GQU1JTFk=::Q3ljbG9uZSBW::VGFyZ2V0IGRldmljZSBmYW1pbHkgZm9yIHBhcnRpYWwgcmVjb25maWd1cmF0aW9u"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "REFUQV9XSURUSF9JTkRFWA==::MTY=::SW5wdXQgZGF0YSB3aWR0aA=="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "Q0JfREFUQV9XSURUSA==::MTY=::Q0JfREFUQV9XSURUSA=="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RU5BQkxFX0RBVEFfUEFDS0lORw==::dHJ1ZQ==::RU5BQkxFX0RBVEFfUEFDS0lORw=="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "Q0RSQVRJTw==::MQ==::Q2xvY2stdG8tRGF0YSByYXRpbw=="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "RU5BQkxFX0VOSEFOQ0VEX0RFQ09NUFJFU1NJT04=::ZmFsc2U=::RW5hYmxlIGVuaGFuY2VkIGRlY29tcHJlc3Npb24="
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_COMPONENT_PARAMETER "REVWSUNFX0ZBTUlMWQ==::Q3ljbG9uZSBW::REVWSUNFX0ZBTUlMWQ=="
+
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/alt_pr.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_bitstream_host.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_bitstream_controller_v1.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_bitstream_controller_v2.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_cb_host.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_cb_interface.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_cb_controller_v1.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_cb_controller_v2.v"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_mux.sv"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_jtag_interface.v"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_width_adapter.sv"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_bitstream_compatibility_checker_int_host.v"]
+set_global_assignment -library "reconf" -name VERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_bitstream_compatibility_checker_ext_host.v"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_down_converter.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_fifo.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_up_converter.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_bitstream_decoder.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_enhanced_compression_magic_words_decoder_and_suppressor.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_enhanced_decompressor.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_magic_fifo.sv"]
+set_global_assignment -library "reconf" -name SYSTEMVERILOG_FILE [file join $::quartus(qip_path) "reconf/rtl/alt_pr_data.sv"]
+
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_TOOL_NAME "alt_pr"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_TOOL_VERSION "16.0"
+set_global_assignment -entity "alt_pr" -library "reconf" -name IP_TOOL_ENV "mwpim"

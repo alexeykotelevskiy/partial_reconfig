@@ -1,0 +1,74 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "HEX[0]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[1]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[2]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[3]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[4]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[5]",
+					"strict" : false
+				},
+				{
+					"name" : "HEX[6]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "dir",
+					"strict" : false
+				},
+				{
+					"name" : "nreset",
+					"strict" : false
+				}
+			]
+		},
+		{
+			"name" : "led_flash:led_flash_inst",
+			"pins" : [
+				{
+					"name" : "leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
